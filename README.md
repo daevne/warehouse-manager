@@ -94,8 +94,3 @@ If you want to contribute:
 🧪 **Add tests** using QUnit and Ember Testing Library\
 📌 **Improve UI/UX** with enhanced styling and usability\
 🔄 **Optimize data handling** for better performance and scalability
-
-## Author
-
-**Name:** [Your Name]\Bocsó Eszter
-**GitHub:** [Your GitHub Profile](https://github.com/daevne)
