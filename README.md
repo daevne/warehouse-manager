@@ -59,8 +59,8 @@ The application loads products and warehouse positions from a static JSON file (
 ✅ Search products in the product list\
 ✅ Save data in **localStorage**\
 ✅ Use **Ember Store** for data management\
-❌ (Not yet) Adding new products and positions
-❌ (Not yet) Validation
+❌ (Not yet) Adding new products and positions\
+❌ (Not yet) Validation\
 
 ## Technologies
 
