@@ -1,0 +1,25 @@
+{
+  "products": [
+    { "id": "1", "name": "Termék 1", "positionId": "A1" },
+    { "id": "2", "name": "Termék 2", "positionId": "A1" },
+    { "id": "3", "name": "Termék 3", "positionId": "A3" },
+    { "id": "4", "name": "Termék 4", "positionId": "B1" },
+    { "id": "5", "name": "Termék 5", "positionId": "B2" },
+    { "id": "6", "name": "Termék 6", "positionId": "B2" },
+    { "id": "7", "name": "Termék 7", "positionId": "C1" },
+    { "id": "8", "name": "Termék 8", "positionId": "C2" },
+    { "id": "9", "name": "Termék 9", "positionId": "C2" },
+    { "id": "10", "name": "Termék 10", "positionId": "C3" }
+  ],
+  "positions": [
+    { "id": "A1", "name": "A1" },
+    { "id": "A2", "name": "A2" },
+    { "id": "A3", "name": "A3" },
+    { "id": "B1", "name": "B1" },
+    { "id": "B2", "name": "B2" },
+    { "id": "B3", "name": "B3" },
+    { "id": "C1", "name": "C1" },
+    { "id": "C2", "name": "C2" },
+    { "id": "C3", "name": "C3" }
+  ]
+}

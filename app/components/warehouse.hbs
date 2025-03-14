@@ -1,0 +1,19 @@
+<div class="container mt-4">
+  <h2 class="mb-4 text-center">Raktár</h2>
+
+  <div class="d-flex justify-content-center mb-4">
+    <LinkTo @route="products" class="btn btn-primary me-2">Termék lista</LinkTo>
+  </div>
+
+  <div class="alert alert-info text-center" role="alert">
+    Áthelyezéshez húzd át terméket a kívánt polcra vagy a termék listában válassz új polcot a legördülő menüből.
+  </div>
+
+  <div class="row">
+    {{#each this.positions as |position|}}
+      <div class="col-md-4 mb-4">
+        <Position @position={{position}} />
+      </div>
+    {{/each}}
+  </div>
+</div>

@@ -1,0 +1,33 @@
+{{page-title "Products"}}
+
+<div class="container mt-4">
+  <h2 class="mb-4 text-center">Termékek</h2>
+</div>
+
+<div class="container mt-4">
+  <div class="d-flex justify-content-center mb-4">
+    <div class="col">
+      <LinkTo @route="warehouse" class="btn btn-primary me-2">Raktár</LinkTo>
+    </div>
+    <div class="col">
+      <Search @onSearch={{this.updateSearchResults}} />
+    </div>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Név</th>
+        <th>Pozíció</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each this.filteredProducts as |product|}}
+        <ProductRow @product={{product}} @positions={{@model.positions}} @onPositionChange={{this.updateProductPosition}} />
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+
+{{outlet}}

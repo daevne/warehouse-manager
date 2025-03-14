@@ -1,56 +1,101 @@
-# warehouse-manager
+# Ember.js Trial Task - Warehouse Manager
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This application manages products and warehouse positions using **Ember.js**.
 
-## Prerequisites
+## Table of Contents
 
-You will need the following things properly installed on your computer.
-
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/) (with npm)
-- [Ember CLI](https://cli.emberjs.com/release/)
-- [Google Chrome](https://google.com/chrome/)
+- [Installation](#installation)
+- [Data Handling](#data-handling)
+- [Functionality](#functionality)
+- [Technologies](#technologies)
+- [Usage](#usage)
+- [Development](#development)
+- [Planned Features](#planned-features)
+- [Author](#author)
 
 ## Installation
 
-- `git clone <repository-url>` this repository
-- `cd warehouse-manager`
-- `npm install`
+1. **Clone the repository:**
 
-## Running / Development
+   ```sh
+   git clone https://github.com/daevne/warehouse-manager.git
+   cd warehouse-manager
+   ```
 
-- `npm run start`
-- Visit your app at [http://localhost:4200](http://localhost:4200).
-- Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+2. **Install dependencies:**
 
-### Code Generators
+   ```sh
+   npm install
+   ```
 
-Make use of the many generators for code, try `ember help generate` for more details
+3. **Start the application:**
 
-### Running Tests
+   ```sh
+   ember serve
+   ```
 
-- `npm run test`
-- `npm run test:ember -- --server`
+   The project will be available at **[http://localhost:4200/](http://localhost:4200/)**.
 
-### Linting
+## Data Handling
 
-- `npm run lint`
-- `npm run lint:fix`
+The application loads products and warehouse positions from a static JSON file (`/data/mock-data.json`). Data management is handled by the **DataHandlerService** in Ember.js. Products and positions are stored in the **Ember Store**, and modifications are saved in **localStorage**.
 
-### Building
+### Data Loading Process:
 
-- `npm exec ember build` (development)
-- `npm run build` (production)
+1. On startup, the app checks if there are saved positions in **localStorage**.
+2. If saved data exists, it is used; otherwise, data is fetched from the JSON file.
+3. The fetched data is pushed into the Ember Store for easy access.
 
-### Deploying
+### Updating Positions:
 
-Specify what it takes to deploy your app.
+- Users can modify the warehouse position of products.
+- Changes are immediately saved in **localStorage** and reflected in the UI.
+- The Ember Store is used for data updates.
 
-## Further Reading / Useful Links
+## Functionality
 
-- [ember.js](https://emberjs.com/)
-- [ember-cli](https://cli.emberjs.com/release/)
-- Development Browser Extensions
-  - [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  - [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+✅ Display products\
+✅ Modify product warehouse positions\
+✅ Search products in the product list\
+✅ Save data in **localStorage**\
+✅ Use **Ember Store** for data management\
+❌ (Not yet) Adding new products and positions
+❌ (Not yet) Validation
+
+## Technologies
+
+- **Frontend:** Ember.js (Octane edition)
+- **Styling:** Boostrap CSS
+- **Data Management:** Ember Data, Ember Store, localStorage
+- **Linting & Formatting:** ESLint, Stylelint, Prettier, Ember Template Lint
+- **Testing:** QUnit, Ember Test Helpers
+- **Build Tools:** Ember CLI, Webpack
+
+## Usage
+
+- The homepage displays a grid layout with product cards, each showing their warehouse position.
+- Positions can be modified, with drag and drop and changes are saved immediately.
+- A separate page provides a list of products with a search function, allowing users to select a new position from a dropdown menu.
+- Data is loaded from a static JSON file and managed through the Ember Store.
+
+## Development
+
+If you want to contribute:
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature-new-functionality`
+3. Implement changes and commit: `git commit -m "Added new functionality"`
+4. Push the changes: `git push origin feature-new-functionality`
+5. Open a Pull Request.
+
+## Planned Features
+
+🚀 **Implement Mirage.js** for dynamic API simulation\
+🧪 **Add tests** using QUnit and Ember Testing Library\
+📌 **Improve UI/UX** with enhanced styling and usability\
+🔄 **Optimize data handling** for better performance and scalability
+
+## Author
+
+**Name:** [Your Name]\Bocsó Eszter
+**GitHub:** [Your GitHub Profile](https://github.com/daevne)

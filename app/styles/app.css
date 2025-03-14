@@ -1,1 +1,21 @@
-/* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
+body {
+  background-color: #edeeff;
+}
+
+tr {
+  border: #edeeff;
+}
+
+.draggable-product {
+  cursor: grab;
+  width: 48%;
+}
+
+.draggable-product:active {
+  cursor: grabbing;
+}
+
+.draggable-product:hover {
+  background-color: #f8f9fa;
+  transition: background-color 0.2s ease-in-out;
+}

@@ -1,0 +1,13 @@
+<tr>
+  <td>{{@product.id}}</td>
+  <td>{{@product.name}}</td>
+  <td>
+    <select class="form-select" {{on "change" this.updateProductPosition}}>
+      {{#each @positions as |position|}}
+        <option value="{{position.id}}" selected={{eq this.currentPositionName position.name}}>
+          {{position.name}}
+        </option>
+      {{/each}}
+    </select>
+  </td>
+</tr>

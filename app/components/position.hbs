@@ -1,0 +1,26 @@
+<div class="card border-primary h-100">
+  <div class="card-header bg-primary text-white">
+    {{this.position.name}}
+  </div>
+  <div
+    class="card-body d-flex flex-wrap justify-content-between"
+    {{on "dragover" this.allowDrop}}
+    {{on "drop" (fn this.dropProduct this.position.id)}}
+  >
+    {{#if this.products.length}}
+      {{#each this.products as |product|}}
+        <div
+          class="card mb-2 p-2 border-secondary draggable-product"
+          draggable="true"
+          {{on "dragstart" (fn this.startDrag product)}}
+        >
+          <div class="card-body p-2 text-center">
+            <span>{{product.name}}</span>
+          </div>
+        </div>
+      {{/each}}
+    {{else}}
+      <p class="text-muted">Nincs termék</p>
+    {{/if}}
+  </div>
+</div>
