@@ -59,7 +59,7 @@ The application loads products and warehouse positions from a static JSON file (
 ✅ Search products in the product list\
 ✅ Save data in **localStorage**\
 ✅ Use **Ember Store** for data management\
-❌ (Not yet) Adding new products and positions
+❌ (Not yet) Adding new products and positions\
 ❌ (Not yet) Validation
 
 ## Technologies
@@ -94,8 +94,3 @@ If you want to contribute:
 🧪 **Add tests** using QUnit and Ember Testing Library\
 📌 **Improve UI/UX** with enhanced styling and usability\
 🔄 **Optimize data handling** for better performance and scalability
-
-## Author
-
-**Name:** [Your Name]\Bocsó Eszter
-**GitHub:** [Your GitHub Profile](https://github.com/daevne)
