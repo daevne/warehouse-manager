@@ -1,7 +1,15 @@
 <div class="input-group">
-  <Input @value={{this.searchQuery}} class="form-control" placeholder="Termékkereső" aria-label="Search input" {{on "input" this.updateQuery}} />
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Termékkereső"
+    aria-label="Search input"
+    value={{this.searchQuery}}
+    {{on "input" this.updateQuery}}
+  />
 
   <button class="btn btn-outline-secondary" type="button" {{on "click" this.clearSearch}}>
     <i class="bi bi-x"></i>
   </button>
 </div>
+
